@@ -1,0 +1,28 @@
+<table class="table text-light">
+
+    <thead>
+        <tr>
+            <th>Név</th>
+            <th>Email</th>
+            <th>Cím</th>
+            <th>Telefonszám</th>
+            <th>Darab</th>
+            <th>Funkciók</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let tempOrder of orders">
+            <td>{{ tempOrder.name }}</td>
+            <td>{{ tempOrder.email }}</td>
+            <td>{{ tempOrder.address }}</td>
+            <td>{{ tempOrder.phoneNumber }}</td>
+            <td>{{ tempOrder.pieces }}</td>
+            <td>
+                <button (click)="updateOrder(tempOrder.id)" class="btn btn-outline-danger mx-1 my-1" ><i class="fas fa-edit"></i></button>
+                <button (click)="deleteOrder(tempOrder.id)" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

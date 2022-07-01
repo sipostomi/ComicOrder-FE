@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+.navbar{
+    padding: 30px;
+    font-family: 'Supermercado One', cursive;
+    font-size: 1.5rem;
+}
+
+.navbar-brand{
+    font-family: 'Comforter', cursive;
+    font-size: 2.5rem;
+}
+
+.nav-item{
+    padding: 0 0 0 20px;
+}

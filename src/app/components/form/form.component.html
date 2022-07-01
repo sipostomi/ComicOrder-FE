@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+          <form (ngSubmit)="onSubmit()" #f="ngForm">
+    
+            <div class="form-group">
+              <label>Név:</label>
+              <input 
+              type="text" 
+              class="form-control" 
+              [(ngModel)]="order.name"
+              name="name"
+              required
+              #name="ngModel">
+              <span class="help-block" *ngIf="!name.valid">Kérlek, add meg a neved!</span>
+          </div>
+    
+          <div class="form-group">
+            <label>E-mail:</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            [(ngModel)]="order.email"
+            name="email"
+            required email
+            #email="ngModel">
+            <span class="help-block" *ngIf="!email.valid">Kérlek, adj meg egy érvényes e-mail címet!</span>
+          </div>
+    
+          <div class="form-group">
+            <label>Cím:</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            [(ngModel)]="order.address"
+            name="address"
+            required
+            #address="ngModel">
+            <span class="help-block" *ngIf="!address.valid">Kérlek, add meg a címed!</span>
+          </div>
+    
+          <div class="form-group">
+            <label>Telefonszám:</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            [(ngModel)]="order.phoneNumber"
+            name="phoneNumber"
+            placeholder="+36"
+            required
+            #phoneNumber="ngModel">
+            <span class="help-block" *ngIf="!phoneNumber.valid">Kérlek, add meg a telefonszámod!</span>
+          </div>
+    
+          <div class="form-group">
+            <label>Mennyiség (darab):</label>
+            <input 
+            type="number" 
+            class="form-control" 
+            [(ngModel)]="order.pieces"
+            name="pieces"
+            required
+            #pieces="ngModel">
+            <span class="help-block" *ngIf="!pieces.valid">Kérlek, add meg, hogy hány darabot szeretnél vásárolni!</span>
+          </div>
+           
+          <button class="btn btn-danger mt-3" type="submit" [disabled]="!f.valid">Megrendelés</button>
+          <button class="btn btn-light mx-2 mt-3" type="reset" >Elvetés</button>
+    
+          </form>
+        </div>
+      </div>
+    </div>
